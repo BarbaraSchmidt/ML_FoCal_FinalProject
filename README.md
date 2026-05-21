@@ -2,10 +2,24 @@
 Final project for ML course using FoCal Data
 
 
-!!! Not rootified, this is for the raw data!!!
-To get the raw datafiles, open powershell where you want the datafiles to be (reccomend rightclicking on the Data folder and pressing on open in intergrated terminal), then run:
-  curl.exe -L -o Run607.ch2g "https://cernbox.cern.ch/files/spaces/eos/experiment/alice/focal/TB_2026_Wk17_H2/data/disk2/data/Run607.ch2g"
+To get datafiles: ... work in progress, need to use 
+  scp -T baschmid@lxplus.cern.ch:/eos/experiment/alice/focal/TB_2026_Wk17_H2/data/disk2/data/Run557.ch2g .
+But need cern account, and need to be approved, currently awaiting approval
 
-Change the run number BOTH places to the desired rin number
 
-Right now we are looking at run 603 - 607 and run 577 - 580
+To rootify data:
+If first time rootifying, run 
+  chmod +x run_rootifier.sh
+
+Then run 
+  ./run_rootifier.sh
+
+
+
+Before syncing with the git, run 
+  rm Rootified/intermediate/*.root
+to empty the intermediate rootified results
+
+And run 
+  rm Data/*.ch2g
+To remove the VERY large raw files

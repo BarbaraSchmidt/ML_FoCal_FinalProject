@@ -1,0 +1,3 @@
+repository='https://github.com/RockPie/CRU_RDH_Decoder.git'
+module=''
+tag='origin'

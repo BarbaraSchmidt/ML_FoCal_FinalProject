@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbinparse.a CMakeFiles/binparse.dir/src/parser.cpp.o CMakeFiles/binparse.dir/src/tail.cpp.o
+/usr/bin/ranlib libbinparse.a

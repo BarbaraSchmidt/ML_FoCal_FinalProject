@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/eigen-src/test/dontalign.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"BuildOfficial"
+		],
+		"name" : "dontalign_4"
+	}
+}

@@ -1,0 +1,75 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Wshorten64to32 failed with the following output:
+Change Dir: /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_a2392/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a2392.dir/build.make CMakeFiles/cmTC_a2392.dir/build
+gmake[1]: Entering directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a2392.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_Wshorten64to32  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Werror   -Wshorten-64-to-32 -std=c++17 -o CMakeFiles/cmTC_a2392.dir/src.cxx.o -c /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Wshorten-64-to-32'
+gmake[1]: *** [CMakeFiles/cmTC_a2392.dir/build.make:78: CMakeFiles/cmTC_a2392.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_a2392/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd981 failed with the following output:
+Change Dir: /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_901a2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_901a2.dir/build.make CMakeFiles/cmTC_901a2.dir/build
+gmake[1]: Entering directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_901a2.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_wd981  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror   -wd981 -std=c++17 -o CMakeFiles/cmTC_901a2.dir/src.cxx.o -c /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-wd981'
+gmake[1]: *** [CMakeFiles/cmTC_901a2.dir/build.make:78: CMakeFiles/cmTC_901a2.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_901a2/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_wd2304 failed with the following output:
+Change Dir: /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_b9c50/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b9c50.dir/build.make CMakeFiles/cmTC_b9c50.dir/build
+gmake[1]: Entering directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b9c50.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_wd2304  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror   -wd2304 -std=c++17 -o CMakeFiles/cmTC_b9c50.dir/src.cxx.o -c /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-wd2304'
+gmake[1]: *** [CMakeFiles/cmTC_b9c50.dir/build.make:78: CMakeFiles/cmTC_b9c50.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_b9c50/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_STRICTANSI failed with the following output:
+Change Dir: /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_54c79/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_54c79.dir/build.make CMakeFiles/cmTC_54c79.dir/build
+gmake[1]: Entering directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_54c79.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_STRICTANSI  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror   -strict-ansi -std=c++17 -o CMakeFiles/cmTC_54c79.dir/src.cxx.o -c /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-strict-ansi'; did you mean '-fstrict-enums'?
+gmake[1]: *** [CMakeFiles/cmTC_54c79.dir/build.make:78: CMakeFiles/cmTC_54c79.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_54c79/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test COMPILER_SUPPORT_Qunusedarguments failed with the following output:
+Change Dir: /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_12401/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_12401.dir/build.make CMakeFiles/cmTC_12401.dir/build
+gmake[1]: Entering directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_12401.dir/src.cxx.o
+/usr/bin/c++ -DCOMPILER_SUPPORT_Qunusedarguments  -std=c++03 -pedantic -Wall -Wextra -Wundef -Wcast-align -Wchar-subscripts -Wnon-virtual-dtor -Wunused-local-typedefs -Wpointer-arith -Wwrite-strings -Wformat-security -Wlogical-op -Wenum-conversion -Wc++11-extensions -Wdouble-promotion -Wshadow -Wno-psabi -Wno-variadic-macros -Wno-long-long -fno-check-new -fno-common -fstrict-aliasing -Werror   -Qunused-arguments -std=c++17 -o CMakeFiles/cmTC_12401.dir/src.cxx.o -c /home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp/src.cxx
+c++: error: unrecognized command-line option '-Qunused-arguments'
+gmake[1]: *** [CMakeFiles/cmTC_12401.dir/build.make:78: CMakeFiles/cmTC_12401.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:127: cmTC_12401/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

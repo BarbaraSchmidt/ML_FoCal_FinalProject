@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/CMakeFiles/binparse-populate"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/CMakeFiles/binparse-populate.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/CMakeFiles/binparse-populate-complete.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-build.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-configure.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-download.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-install.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-patch.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-test.rule"
+		},
+		{
+			"file" : "/home/baschmid/sw/ML/ML_FoCal_FinalProject/build/_deps/binparse-subbuild/binparse-populate-prefix/src/binparse-populate-stamp/binparse-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"binparse-populate"
+		],
+		"name" : "binparse-populate"
+	}
+}

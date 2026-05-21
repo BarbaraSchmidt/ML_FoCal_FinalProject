@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/bpx_tail.dir/src/main_tail.cpp.o -o ../../bin/scripts/bpx_tail  libbinparse.a 
