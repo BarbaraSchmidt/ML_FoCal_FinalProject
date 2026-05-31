@@ -4,8 +4,7 @@ Final project for ML course using FoCal Data
 
 To get datafiles: ... work in progress, need to use 
   scp -T baschmid@lxplus.cern.ch:/eos/experiment/alice/focal/TB_2026_Wk17_H2/data/disk2/data/Run557.ch2g .
-But need cern account, and need to be approved, currently awaiting approval
-
+But need cern account
 
 To rootify data:
 If first time rootifying, run 
