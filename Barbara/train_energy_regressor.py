@@ -9,7 +9,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-from sklearn.model_selection import GroupShuffleSplit
+from sklearn.model_selection import train_test_split
 
 
 def main():
@@ -19,21 +19,17 @@ def main():
     args = parser.parse_args()
 
     df = pd.read_parquet(args.input)
+    df = df[df["particle"] == "h"].copy()
 
-    # Do not use run or event index as model features.
-    drop_cols = ["run", "event_index", args.target]
+    drop_cols = ["run", "event_index", args.target, "particle"]
     X = df.drop(columns=[c for c in drop_cols if c in df.columns])
     y = df[args.target]
     groups = df["run"]
 
-    categorical = []
-    numeric = []
+    categorical = ["phase_mode", "tungsten"]
+    categorical = [c for c in categorical if c in X.columns]
 
-    for col in X.columns:
-        if X[col].dtype == "object" or col in ["tungsten"]:
-            categorical.append(col)
-        else:
-            numeric.append(col)
+    numeric = [c for c in X.columns if c not in categorical]
 
     preprocess = ColumnTransformer(
         transformers=[
@@ -58,24 +54,52 @@ def main():
         ("model", model),
     ])
 
-    splitter = GroupShuffleSplit(n_splits=1, test_size=0.25, random_state=42)
-    train_idx, test_idx = next(splitter.split(X, y, groups=groups))
+    train_idx = []
+    test_idx = []
 
-    pipe.fit(X.iloc[train_idx], y.iloc[train_idx])
-    pred = pipe.predict(X.iloc[test_idx])
+    for run, run_df in df.groupby("run"):
+        run_indices = run_df.index.to_numpy()
 
-    mae = mean_absolute_error(y.iloc[test_idx], pred)
-    rmse = mean_squared_error(y.iloc[test_idx], pred, squared=False)
+        run_train_idx, run_test_idx = train_test_split(
+            run_indices,
+            test_size=0.10,
+            random_state=42,
+            shuffle=True,
+        )
 
-    print("Run-wise split evaluation")
-    print(f"Train runs: {sorted(df.iloc[train_idx]['run'].unique())}")
-    print(f"Test runs:  {sorted(df.iloc[test_idx]['run'].unique())}")
+        train_idx.extend(run_train_idx)
+        test_idx.extend(run_test_idx)
+
+    train_idx = np.array(train_idx)
+    test_idx = np.array(test_idx)
+
+    pipe.fit(X.loc[train_idx], y.loc[train_idx])
+    # feature_names = pipe.named_steps["preprocess"].get_feature_names_out()
+
+    # importance = pipe.named_steps["model"].feature_importances_
+
+    # imp = pd.DataFrame({
+    #     "feature": feature_names,
+    #     "importance": importance
+    # }).sort_values("importance", ascending=False)
+
+    # print(imp.head(20))
+
+
+    pred = pipe.predict(X.loc[test_idx])
+
+    mae = mean_absolute_error(y.loc[test_idx], pred)
+    rmse = np.sqrt(mean_squared_error(y.loc[test_idx], pred))
+
+    print("90/10 split within each run")
+    print(f"Train runs: {sorted(df.loc[train_idx]['run'].unique())}")
+    print(f"Test runs:  {sorted(df.loc[test_idx]['run'].unique())}")
     print(f"MAE:  {mae:.3f} GeV")
     print(f"RMSE: {rmse:.3f} GeV")
 
     result = pd.DataFrame({
-        "run": df.iloc[test_idx]["run"].values,
-        "true_energy_GeV": y.iloc[test_idx].values,
+        "run": df.loc[test_idx]["run"].values,
+        "true_energy_GeV": y.loc[test_idx].values,
         "pred_energy_GeV": pred,
     })
     print(result.groupby("run")[["true_energy_GeV", "pred_energy_GeV"]].mean())

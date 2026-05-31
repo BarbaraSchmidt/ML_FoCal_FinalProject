@@ -1,0 +1,23 @@
+Noticed that the SiPM bias seems to have the largest effect on the values, even more than the beam energy
+
+
+pretty good:
+100 GeV unlocked → ~101–103
+150 GeV unlocked → ~149–153
+325 GeV locked → ~324–325
+
+
+not so good: 47 v + tungsten
+60 GeV  → ~82
+100 GeV → ~120
+200 GeV → ~186–189
+350 GeV → ~326
+
+
+
+
+
+
+
+
+python extract_energy_features.py --metadata /home/baschmid/sw/ML/ML_FoCal_FinalProject/metadata_template.csv --input /home/baschmid/sw/ML/ML_FoCal_FinalProject/Rootified/final/*root --output energy_training_table.parquet
