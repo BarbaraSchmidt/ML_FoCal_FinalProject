@@ -15,9 +15,27 @@ not so good: 47 v + tungsten
 
 
 
-
+High overlap between energies gives high MAE
 
 
 
 
 python extract_energy_features.py --metadata /home/baschmid/sw/ML/ML_FoCal_FinalProject/metadata_template.csv --input /home/baschmid/sw/ML/ML_FoCal_FinalProject/Rootified/final/*root --output energy_training_table.parquet
+
+
+
+
+
+
+Check matrix
+
+classifyer på energi lables vil være mere stabilt
+
+300 fucked pga det er max value,  kan fucke op med regression
+
+
+drop epical files, de fucker output
+
+muligvis prøv med heatmaps i stedet
+
+Mulig konklution: uden flere faktorer er det ikke muligt at skelne nbedre pga de store overlaps
